@@ -10,10 +10,12 @@ fn main() {
         match diff {
             DiffResult::Added(a) => println!("+{} new index = {}", a.data, a.new_index.unwrap()),
             DiffResult::Common(c) => {
-                println!(" {} old index = {}, new index = {}",
-                         c.data,
-                         c.old_index.unwrap(),
-                         c.new_index.unwrap())
+                println!(
+                    " {} old index = {}, new index = {}",
+                    c.data,
+                    c.old_index.unwrap(),
+                    c.new_index.unwrap()
+                )
             }
             DiffResult::Removed(r) => println!("-{} old index = {}", r.data, r.old_index.unwrap()),
         }
